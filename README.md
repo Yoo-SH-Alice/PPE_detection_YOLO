@@ -61,12 +61,21 @@ vest: 시인성 확보를 위한 안전조끼 (형광색, 빨간색 등)
 
 가장 성능이 좋았던 2차 모델은 200 에포크 동안 약 1.65시간의 훈련을 거쳤습니다.
 
+#### 1) results
 <img width="2400" height="1200" alt="Image" src="https://github.com/user-attachments/assets/85a71c06-5061-4db2-96c2-a5133c8977a1" />
 
-1. Precision (정밀도): 0.956
-2. Recall (재현율): 0.962
-3. mAP50: 0.977
-4. mAP50-95: 0.842
+- Precision (정밀도): 0.956
+- Recall (재현율): 0.962
+- AP50: 0.977
+- P50-95: 0.842
+
+#### 2) confusion_matrix
+<img width="700" height="2250" alt="Image" src="https://github.com/user-attachments/assets/eacd5379-89e8-44e2-b8a1-68ad5d455066" />
+
+- person 0.97
+- helmet 0.96
+- belt : 0.94
+- vest : 0.96
 
 
 ### 5.2 객체인식
@@ -81,7 +90,8 @@ vest: 시인성 확보를 위한 안전조끼 (형광색, 빨간색 등)
 |---|---|
 | ![Image](https://github.com/user-attachments/assets/7ea6112c-3da2-4ada-a4f9-ef0b4217e35c) |  ![Image](https://github.com/user-attachments/assets/180810f0-d905-48f0-94df-b44b6f3e4ba9) |
 | helmet(O) best(오인식) | helmet(O) belt(X) |
- 
+
+테스트 이미지 출처 pixabay, pexels
 
 
 
