@@ -4,6 +4,7 @@
 
 이 프로젝트는 YOLO11 모델로 공사현장에서 사용하는 안전장비 객체를 실시간으로 감지하는 모델을 개발하는 것을 목표로 합니다. 탐지 대상은 `사람(person)`, `헬멧(helmet)`, `안전벨트(belt)`, `안전조끼(vest)` 총 4개의 클래스입니다.
 
+---
 
 ### 2. 모델 추가 훈련의 필요성
 
@@ -31,19 +32,19 @@
 기존에 공개된 데이터셋들을 수집해 필요한 데이터를 선별했습니다. 한국에서 사용할 것을 고려해 훈련에 사용한 이미지 대부분은 한국 공사현장 사진과 캐글에서  안전조끼 데이터를 수집해 사용했습니다. 
 
 
-### 3.1. 데이터 출처
+### 4.1. 데이터 출처
 - AI Hub: 530장
 - Roboflow: 200장
 - Kaggle: 75장
 
-### 3.2. 클래스 정보
+### 4.2. 클래스 정보
 person: 작업자 탐지를 위한 클래스
 helmet: 공사 현장 안전모 (색상 무관)
 belt: 추락 방지용 안전대
 vest: 시인성 확보를 위한 안전조끼 (형광색, 빨간색 등)
 
 
-### 3.3. 데이터 수량 및 분할
+### 4.3. 데이터 수량 및 분할
 데이터 증강(Data Augmentation) 기법을 활용하여 데이터의 양을 2배로 늘렸습니다.
 
 | 구분 | 이미지 수량 | 객체 수 |
@@ -58,8 +59,9 @@ vest: 시인성 확보를 위한 안전조끼 (형광색, 빨간색 등)
 
 ### 5.1 그래프
 
-가장 성능이 좋았던 2차 모델은 200 에포크 동안 약 1.65시간의 훈련을 거쳤습니다. 훈련 결과는 다음과 같습니다.
+가장 성능이 좋았던 2차 모델은 200 에포크 동안 약 1.65시간의 훈련을 거쳤습니다.
 
+<img width="2400" height="1200" alt="Image" src="https://github.com/user-attachments/assets/85a71c06-5061-4db2-96c2-a5133c8977a1" />
 
 1. Precision (정밀도): 0.956
 2. Recall (재현율): 0.962
@@ -67,10 +69,19 @@ vest: 시인성 확보를 위한 안전조끼 (형광색, 빨간색 등)
 4. mAP50-95: 0.842
 
 
+### 5.2 객체인식
 
-### 5.2 객체인식 결과
+| 결과 이미지1 | 결과 이미지2 |
+|---|---|
+|  ![Image](https://github.com/user-attachments/assets/f0c6d182-a023-489e-9a1f-396b5ef03961) | ![Image](https://github.com/user-attachments/assets/e747a8d1-063c-4324-beda-b490e1469c09) |
+|helmet(O) vest(O) | person(△), helmet(O) , vest(O) |
 
 
+| 결과 이미지3 | 결과 이미지4 |
+|---|---|
+| ![Image](https://github.com/user-attachments/assets/7ea6112c-3da2-4ada-a4f9-ef0b4217e35c) |  ![Image](https://github.com/user-attachments/assets/180810f0-d905-48f0-94df-b44b6f3e4ba9) |
+| helmet(O) best(오인식) | helmet(O) belt(X) |
+ 
 
 
 
