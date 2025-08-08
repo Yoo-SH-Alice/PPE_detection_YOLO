@@ -21,7 +21,7 @@
 - **훈련 소스코드:** [Google Colab 링크](https://colab.research.google.com/drive/1H8QjBmVXj1mpswNyN161oyyto7Chrmv5?usp=sharing)
 
 모델 훈련은 총 3차에 걸쳐 진행하며 성능을 최적화했습니다.
-- **1차 훈련** 3개 클래스(person, belt, helmet)로 초기학습 진행. 안전대(belt)를 안전조끼로 오인식하는 경우가 발생함.
+- **1차 훈련** 3개 클래스(person, belt, helmet)로 초기학습 진행.안전조끼(vest)를  안전대(belt)로  오인식하는 경우가 발생함.
 - **2차 훈련** (🌟Best Model): 1차 데이터에 사람이 없는 공사장, 다양한 안전조끼 이미지 등을 추가하여 모델의 **오인식(False Positive)** 을 줄이는 데 집중. 이 단계에서 가장 우수한 성능의 모델을 확보.
 - **3차 훈련** 2차 훈련 데이터셋을 활용해 에포크를 300으로 늘려 추가 성능 개선 시도.
 
