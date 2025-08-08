@@ -22,7 +22,7 @@
 
 모델 훈련은 총 3차에 걸쳐 진행하며 성능을 최적화했습니다.
 - **1차 훈련** 3개 클래스(person, belt, helmet)로 초기학습 진행. 안전대(belt)를 안전조끼로 오인식하는 경우가 발생함.
-- **2차 훈련** (🌟Best Model): 1차 데이터에 사람이 없는 공사장, 다양한 안전조끼 이미지 등을 추가하여 모델의 **오인식(False Positive)**을 줄이는 데 집중. 이 단계에서 가장 우수한 성능의 모델을 확보.
+- **2차 훈련** (🌟Best Model): 1차 데이터에 사람이 없는 공사장, 다양한 안전조끼 이미지 등을 추가하여 모델의 **오인식(False Positive)** 을 줄이는 데 집중. 이 단계에서 가장 우수한 성능의 모델을 확보.
 - **3차 훈련** 2차 훈련 데이터셋을 활용해 에포크를 300으로 늘려 추가 성능 개선 시도.
 
 
@@ -33,6 +33,7 @@
 
 
 ### 4.1. 데이터 출처
+총 800장의 이미지를 선별해서 레이블링을 했습니다
 - AI Hub: 530장
 - Roboflow: 200장
 - Kaggle: 75장
@@ -44,7 +45,7 @@
 - vest: 시인성 확보를 위한 안전조끼 (형광색, 빨간색 등)
 
 
-### 4.3. 데이터 수량 및 분할
+### 4.3. 데이터 분할
 데이터 증강(Data Augmentation) 기법을 활용하여 데이터의 양을 2배로 늘렸습니다.
 
 | 구분 | 이미지 수량 | 객체 수 |
@@ -66,8 +67,8 @@
 
 - Precision (정밀도): 0.956
 - Recall (재현율): 0.962
-- AP50: 0.977
-- P50-95: 0.842
+- mAP50: 0.977
+- mAP50-95: 0.842
 
 #### 2) confusion_matrix
 <img width="700" height="2250" alt="Image" src="https://github.com/user-attachments/assets/eacd5379-89e8-44e2-b8a1-68ad5d455066" />
@@ -80,10 +81,16 @@
 
 ### 5.2 객체인식
 
-| 2차모델 이미지 객체인식1 | 2차모델 이미지 객체인식2 |
-|---|---|
-|  ![Image](https://github.com/user-attachments/assets/f0c6d182-a023-489e-9a1f-396b5ef03961) | ![Image](https://github.com/user-attachments/assets/e747a8d1-063c-4324-beda-b490e1469c09) |
-|helmet(O) vest(O) | person(△), helmet(O) , vest(O) |
+<table>
+<tr>
+<th>1차 훈련 모델 영상에서 객체인식</th>
+<th>2차 훈련모델 영상에서 겍체 인식</th>
+</tr>
+<tr>
+<td><img src="https://github.com/user-attachments/assets/f0c6d182-a023-489e-9a1f-396b5ef03961" width="500"></td>
+<td><img src="https://github.com/user-attachments/assets/e747a8d1-063c-4324-beda-b490e1469c09" width="500"></td>
+</tr>
+</table>
 
 <table>
 <tr>
