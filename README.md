@@ -85,11 +85,16 @@
 |  ![Image](https://github.com/user-attachments/assets/f0c6d182-a023-489e-9a1f-396b5ef03961) | ![Image](https://github.com/user-attachments/assets/e747a8d1-063c-4324-beda-b490e1469c09) |
 |helmet(O) vest(O) | person(△), helmet(O) , vest(O) |
 
-
-| 결과 이미지3 | 결과 이미지4 |
-|---|---|
-| ![Image](https://github.com/user-attachments/assets/7ea6112c-3da2-4ada-a4f9-ef0b4217e35c) |  ![Image](https://github.com/user-attachments/assets/180810f0-d905-48f0-94df-b44b6f3e4ba9) |
-| helmet(O) best(오인식) | helmet(O) belt(X) |
+<table>
+<tr>
+<th>1차 훈련 모델 영상에서 객체인식</th>
+<th>2차 훈련모델 영상에서 겍체 인식</th>
+</tr>
+<tr>
+<td><img src="https://github.com/user-attachments/assets/bbc96661-851f-4ac5-9744-39b3f2c29e41" width="500"></td>
+<td><img src="https://github.com/Yoo-SH-Alice/PPE_detection_YOLO/blob/main/ppe_detect_test.gif" width="500"></td>
+</tr>
+</table>
 
 테스트 이미지 출처 pixabay, pexels
 
