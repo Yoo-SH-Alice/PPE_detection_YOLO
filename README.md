@@ -80,7 +80,7 @@
 
 ### 5.2 객체인식
 
-| 결과 이미지1 | 결과 이미지2 |
+| 2차모델 이미지 객체인식1 | 2차모델 이미지 객체인식2 |
 |---|---|
 |  ![Image](https://github.com/user-attachments/assets/f0c6d182-a023-489e-9a1f-396b5ef03961) | ![Image](https://github.com/user-attachments/assets/e747a8d1-063c-4324-beda-b490e1469c09) |
 |helmet(O) vest(O) | person(△), helmet(O) , vest(O) |
