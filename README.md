@@ -17,7 +17,7 @@
 
 ## 3. 모델 정보
 
-- **사용 모델:** YOLO V11 Small
+- **사용 모델:** YOLO11s
 - **훈련 소스코드:** [Google Colab 링크](https://colab.research.google.com/drive/1H8QjBmVXj1mpswNyN161oyyto7Chrmv5?usp=sharing)
 
 모델 훈련은 총 3차에 걸쳐 진행하며 성능을 최적화했습니다.
@@ -59,7 +59,7 @@
 
 ### 5.1 그래프
 
-가장 성능이 좋았던 2차 모델은 200 에포크 동안 약 1.65시간의 훈련을 거쳤습니다.
+가장 성능이 좋았던 2차 모델은 200 에포크 동안 약 1시간반 정도 훈련을 거쳤습니다.
 
 #### 1) results
 <img width="2400" height="1200" alt="Image" src="https://github.com/user-attachments/assets/85a71c06-5061-4db2-96c2-a5133c8977a1" />
